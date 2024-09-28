@@ -1,0 +1,30 @@
+import java.sql.SQLOutput;
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int R = sc.nextInt();
+        int unit = sc.nextInt();
+        int n = sc.nextInt();
+        int res=0;
+        res=R*unit;
+
+        int sum=0;
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            sum+= arr[i];
+        }
+        if(res>sum){
+           res=sum-res;
+            System.out.println(res);
+        }
+        else if (res<sum) {
+            res = sum - res;
+            System.out.println(res);
+        }
+        else{
+            System.out.println(res);
+        }
+    }
+}
