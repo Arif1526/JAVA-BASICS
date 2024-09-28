@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        String str=sc.next();
+        String res=repeatString(str,n);
+        System.out.print(res);
+    }
+    public static String repeatString(String str,int n){
+        StringBuilder s=new StringBuilder();
+        for (int i = 0; i <n ; i++) {
+            s.append(str);
+        }
+        return s.toString();
+    }
+}
