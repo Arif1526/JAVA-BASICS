@@ -1,0 +1,28 @@
+import java.util.*;
+class Basket {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int m = sc.nextInt();
+        int r = sc.nextInt();
+       System.out.println(count(a, m, r));
+    }
+
+    public static int count(int ap, int ma, int rs) {
+
+        if (ap > ma) {
+            for (int i = ma; i <= ap; i++) {
+                ma++;
+                rs--;
+            }
+        }
+        if (ap < ma) {
+            for (int i = ap; i <= ma; i++) {
+                ma--;
+                rs++;
+            }
+        }
+        return rs;
+        //System.out.println(rs);
+    }
+}
