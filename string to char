@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        String alph="abcdefghijklmnopqrstuvwxyz";
+        StringBuilder sb=new StringBuilder();
+        for(int i=0;i<str.length();i++)
+        {
+            int a=Integer.parseInt(str.valueOf(str.charAt(i)));
+            sb.append(alph.charAt(a-1));
+        }
+        sb.toString();
+        System.out.print(sb);
+    }
+}
