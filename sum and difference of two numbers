@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+class sum{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        System.out.println(sumofdiff(n,m));
+    }
+    public static int sumofdiff(int n,int m){
+        int a=0,b=0;
+        for(int i=1;i<=m;i++){
+            if(i%n==0){
+                a+=i;
+            }
+            if(i%n!=0){
+                b+=i;
+            }
+        }
+        return Math.abs(a-b);
+    }
+}
